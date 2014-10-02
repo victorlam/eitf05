@@ -19,11 +19,12 @@ Klart
 + Säker inmatning för inloggning och registrering
 + Automatisk inloggning vid registrering
 + Lösenord hashas och saltas (bcrypt) 
++ Hämta produkter från databas
++ Dynamisk hantering = oändligt antal produkter
 
 
 Att göra
 --------
-+ Hämta produkter från databas
 + Lägg till varor lokalt
 + SESSIONID hantering
 + Visa kundkorg

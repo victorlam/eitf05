@@ -23,17 +23,25 @@
         <td class="tg-031e">Pris</td>
         <td class="tg-031e">Köp</td>
     </tr>
-    <tr>
-        <td class="tg-031e">Glass</td>
-        <td class="tg-031e">200kr</td>
-        <td class="tg-031e"><a href="#">Lägg till i kundvagnen</a></td>
 
-    </tr>
-    <tr>
-        <td class="tg-031e">Lunch</td>
-        <td class="tg-031e">500kr</td>
-        <td class="tg-031e"><a href="#">Lägg till i kundvagnen</a></td>
-    </tr>
+    <?php
+$query = mysqli_query($con, "select * from products");
+while ($row = mysqli_fetch_assoc($query)) {
+    echo "<tr>\n";
+    echo "        <td class=\"tg-031e\">";
+    echo $row["NAME"];
+    echo "</td>\n";
+    echo "<td class=\"tg-031e\">";
+    echo $row["PRICE"];
+    echo "kr</td>\n";
+    echo "<td class=\"tg-031e\"><a href=\"cart.php?product=";
+                                   echo $row["ID"];
+    echo "\">Lägg till i kundvagnen</a></td>\n";
+    echo "</tr>\n";
+    }
+    ?>
+
+
 </table>
 
 </body>
