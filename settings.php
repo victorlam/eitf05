@@ -1,10 +1,10 @@
 <?php
 // Force SSL protected connection
-if($_SERVER["HTTPS"] != "on")
-{
-    header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
-    exit();
-}
+//if($_SERVER["HTTPS"] != "on")
+//{
+ //   header("Location: https://" . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"]);
+  //  exit();
+//}
 
 
 // Create database connection
@@ -16,10 +16,7 @@ if (mysqli_connect_errno()) {
    exit();
 }
 session_start();
-if(isset($_SESSION['username'])){
-    echo "Du är inloggad som: " . $_SESSION['username'];
-    echo "";
-}
+
 
 
 ?>
