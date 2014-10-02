@@ -8,19 +8,25 @@ EITF05 - Projekt i webbsäkerhet
 
 Klart
 --------
-+ Name-based proxying of HTTPS without decrypting traffic. No keys or
-  certificates required.
-+ Supports both TLS and HTTP protocols.
-+ Supports IPv4, IPv6 and Unix domain sockets for both back end servers and
-  listeners.
-+ Supports multiple listening sockets per instance.
++ Tabeller i MySQL databas
++ Primitiv design i HTML
++ PHP klasser för respektive sida
++ Inställningsklass för tvingad SSL, databasuppgifter och cookie
++ Inloggningsfunktion
++ Utloggningsfunktion
++ Visa användarnamn på alla sidor
++ Registreringsfunktion
++ Säker inmatning för inloggning och registrering
++ Automatisk inloggning vid registrering
++ Lösenord hashas och saltas (bcrypt) 
+
 
 Att göra
 --------
-+ Name-based proxying of HTTPS without decrypting traffic. No keys or
-  certificates required.
-+ Supports both TLS and HTTP protocols.
-+ Supports IPv4, IPv6 and Unix domain sockets for both back end servers and
-  listeners.
-+ Supports multiple listening sockets per instance.
++ Hämta produkter från databas
++ Lägg till varor lokalt
++ SESSIONID hantering
++ Visa kundkorg
++ Betalning
++ Kvitto
 
