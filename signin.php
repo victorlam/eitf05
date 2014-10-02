@@ -15,7 +15,7 @@ if (count($_POST) > 0) {
 
     if ($rows == 1) {
         $_SESSION['username'] = $username;
-        header("location: index.php"); // Redirecting To Other Page
+        header("location: index.php");
     } else {
         $error = "Ogiltiga användaruppgifter!";
         echo $error;
