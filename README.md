@@ -21,13 +21,15 @@ Klart
 + Lösenord hashas och saltas (bcrypt) 
 + Hämta produkter från databas
 + Dynamisk hantering = oändligt antal produkter
++ SESSIONID hantering
++ Säkerhetsinställningar för PHP
++ Sanera indata
++ Lägg till varor
++ Ta bort varor
++ Visa kundvagn
 
 
 Att göra
 --------
-+ Lägg till varor lokalt
-+ SESSIONID hantering
-+ Visa kundkorg
 + Betalning
 + Kvitto
-

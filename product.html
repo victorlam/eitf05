@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($query)) {
     echo "<td class=\"tg-031e\">";
     echo $row["PRICE"];
     echo "kr</td>\n";
-    echo "<td class=\"tg-031e\"><a href=\"cart.php?product=";
+    echo "<td class=\"tg-031e\"><a href=\"cart.php?action=1&product=";
                                    echo $row["ID"];
     echo "\">Lägg till i kundvagnen</a></td>\n";
     echo "</tr>\n";
