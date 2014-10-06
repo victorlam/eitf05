@@ -27,9 +27,8 @@ Klart
 + Lägg till varor
 + Ta bort varor
 + Visa kundvagn
-
++ Betalning
++ Kvitto
 
 Att göra
 --------
-+ Betalning
-+ Kvitto

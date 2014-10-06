@@ -1,5 +1,5 @@
 <?php
 include 'settings.php';
 include 'header.html';
-include 'product.html';
+include 'payment.html';
  ?>

@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<p>Följande produkter finns i din kundvagn:
-</p>
+<h1>KVITTO
+</h1>
 
 
 <style type="text/css">
@@ -18,12 +18,11 @@
     <colgroup>
         <col style="width: 96px">
         <col style="width: 60px">
-        <col style="width: 126px">
+
     </colgroup>
     <tr>
         <td class="tg-031e">Produkt</td>
         <td class="tg-031e">Pris</td>
-        <td class="tg-031e">Köp</td>
     </tr>
 
     <?php
@@ -40,36 +39,19 @@ if(isset($_SESSION['cart'])){
     echo $row["PRICE"];
     $total = $total + $row["PRICE"];
     echo "kr</td>\n";
-    echo "<td class=\"tg-031e\"><a href=\"cart.php?action=2&product=";
-                                   echo $row["ID"];
-    echo "\">Ta bort</a></td>\n";
     echo "</tr>\n";
     }
 
     }
+
     echo "</table>";
 
-
-echo" <p>Att betala: ";
+echo" <p>Följande belopp kommer att dras från ditt kort när varorna lämnar lager: ";
     echo $total;
     echo "kr</p>";
-    }
-
-
-    ?>
-
-
-
-
-<a href="index.php">Fortsätt handla</a>
-<?php
-        if(isset($_SESSION['username'])){
-echo "<li><a href=\"payment.php\">Till betalning</a></li>";
-}else{
-echo "<p> Vänligen logga in för att gå vidare!</p>";
 }
-?>
 
+?>
 
 
 </body>

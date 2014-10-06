@@ -18,12 +18,11 @@
     <colgroup>
         <col style="width: 96px">
         <col style="width: 60px">
-        <col style="width: 126px">
+
     </colgroup>
     <tr>
         <td class="tg-031e">Produkt</td>
         <td class="tg-031e">Pris</td>
-        <td class="tg-031e">Köp</td>
     </tr>
 
     <?php
@@ -40,9 +39,6 @@ if(isset($_SESSION['cart'])){
     echo $row["PRICE"];
     $total = $total + $row["PRICE"];
     echo "kr</td>\n";
-    echo "<td class=\"tg-031e\"><a href=\"cart.php?action=2&product=";
-                                   echo $row["ID"];
-    echo "\">Ta bort</a></td>\n";
     echo "</tr>\n";
     }
 
@@ -53,24 +49,16 @@ if(isset($_SESSION['cart'])){
 echo" <p>Att betala: ";
     echo $total;
     echo "kr</p>";
-    }
-
-
-    ?>
-
-
-
-
-<a href="index.php">Fortsätt handla</a>
-<?php
-        if(isset($_SESSION['username'])){
-echo "<li><a href=\"payment.php\">Till betalning</a></li>";
-}else{
-echo "<p> Vänligen logga in för att gå vidare!</p>";
 }
+
 ?>
+<p>Vänligen kontrollera din beställning ovan och fyll i nedanstående uppgifter för att bekräfta köp.</p>
 
-
+<form name="receipt" action="receipt.php" method="post">
+    Kortnummer: <input type="text" name="creditcard"><br>
+    CVC: <input type="password" name="cvc"><br>
+    <input type="submit" name="submit" value="Betala">
+</form>
 
 </body>
 </html>
