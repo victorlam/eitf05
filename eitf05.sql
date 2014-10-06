@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 02 okt 2014 kl 13:45
+-- Tid vid skapande: 06 okt 2014 kl 03:38
 -- Serverversion: 5.6.17
 -- PHP-version: 5.5.12
 
@@ -64,21 +64,8 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 INSERT INTO `products` (`ID`, `NAME`, `PRICE`) VALUES
 (1, 'Glass', 200),
-(2, 'Lunch', 500);
-
--- --------------------------------------------------------
-
---
--- Tabellstruktur `sessions`
---
-
-CREATE TABLE IF NOT EXISTS `sessions` (
-  `SESSIONID` varchar(255) NOT NULL,
-  `USERNAME` varchar(255) NOT NULL,
-  `TIMEOUT` date NOT NULL,
-  `CART` varchar(255) NOT NULL,
-  UNIQUE KEY `SESSIONID` (`SESSIONID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(2, 'Lunch', 500),
+(3, 'Bakelse', 300);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
