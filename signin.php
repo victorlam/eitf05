@@ -14,12 +14,35 @@ if (count($_POST) > 0) {
 
 
 
-    if ($rows == 1 && password_verify( $password,$row['PASSWORD'] )) {
-        $_SESSION['username'] = $username;
-        header("location: index.php");
+
+
+
+    require_once('recaptchalib.php');
+    $privatekey = "6Lfo3fsSAAAAAFoITL5y6mXshjG5xxJ0qJcOU-Wv";
+    $resp = recaptcha_check_answer ($privatekey,
+        $_SERVER["REMOTE_ADDR"],
+        $_POST["recaptcha_challenge_field"],
+        $_POST["recaptcha_response_field"]);
+
+    if (!$resp->is_valid) {
+        // What happens when the CAPTCHA was entered incorrectly
+        die ("The reCAPTCHA wasn't entered correctly. Go back and try it again." .
+            "(reCAPTCHA said: " . $resp->error . ")");
     } else {
-        $error = "Ogiltiga användaruppgifter!";
-        echo $error;
+        if ($rows == 1 && password_verify( $password,$row['PASSWORD'] )) {
+            $_SESSION['username'] = $username;
+            header("location: index.php");
+        } else {
+            $error = "Ogiltiga användaruppgifter!";
+            echo $error;
+        }
     }
+
+
+
+
+
+
+
 }
 ?>

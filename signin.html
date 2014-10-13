@@ -10,6 +10,12 @@
 </p>
 
 <form name="signin" action="signin.php" method="post">
+    <?php
+
+          require_once('recaptchalib.php');
+          $publickey = "6Lfo3fsSAAAAADG1fUpc8P9Xv9KVGS_uUKipVjL7"; // you got this from the signup page
+          echo recaptcha_get_html($publickey);
+        ?>
     Användarnamn: <input type="text" name="username"><br>
     Lösenord: &nbsp;<input type="password" name="password"><br>
     <input type="submit" name="submit" value="Logga in">
