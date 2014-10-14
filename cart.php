@@ -19,13 +19,4 @@ if ($action == 1) {
     unset($_SESSION['cart'][array_search($id, $_SESSION['cart'])]);
     header('Location: cart.php');
 }
-
-
-
-
-
-
-
-
-
 ?>

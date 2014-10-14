@@ -11,8 +11,28 @@
 
 
 <style type="text/css">
-    .tg  {border-collapse:collapse;border-spacing:0;border-color:#bbb;border-width:1px;border-style:solid;}
-    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;border-color:#bbb;color:#594F4F;background-color:#E0FFEB;border-top-width:1px;border-bottom-width:1px;}
+    .tg {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-color: #bbb;
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    .tg td {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 10px 5px;
+        border-style: solid;
+        border-width: 0px;
+        overflow: hidden;
+        word-break: normal;
+        border-color: #bbb;
+        color: #594F4F;
+        background-color: #E0FFEB;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+    }
 </style>
 <table class="tg" style="undefined;table-layout: fixed; width: 282px">
     <colgroup>
@@ -33,32 +53,38 @@ if(isset($_SESSION['cart'])){
     while ($row = mysqli_fetch_assoc($query)) {
         if(in_array($row["ID"],$_SESSION['cart'])){
             echo "<tr>\n";
-    echo "        <td class=\"tg-031e\">";
-    echo $row["NAME"];
-    echo "</td>\n";
-    echo "<td class=\"tg-031e\">";
-    echo $row["PRICE"];
-    $total = $total + $row["PRICE"];
-    echo "kr</td>\n";
-    echo "<td class=\"tg-031e\"><a href=\"cart.php?action=2&product=";
-                                   echo $row["ID"];
-    echo "\">Ta bort</a></td>\n";
+    echo "
+    <td class=\"tg-031e\">";
+        echo $row["NAME"];
+        echo "
+    </td>
+    \n";
+    echo "
+    <td class=\"tg-031e\">";
+        echo $row["PRICE"];
+        $total = $total + $row["PRICE"];
+        echo "kr
+    </td>
+    \n";
+    echo "
+    <td class=\"tg-031e\"><a href=\"cart.php?action=2&product=";
+                             echo $row["ID"];
+        echo "\">Ta bort</a></td>
+    \n";
     echo "</tr>\n";
     }
 
     }
-    echo "</table>";
+    echo "
+</table>
+";
 
 
 echo" <p>Att betala: ";
     echo $total;
     echo "kr</p>";
-    }
-
-
-    ?>
-
-
+}
+?>
 
 
 <a href="index.php">Fortsätt handla</a>
@@ -69,8 +95,5 @@ echo "<li><a href=\"payment.php\">Till betalning</a></li>";
 echo "<p> Vänligen logga in för att gå vidare!</p>";
 }
 ?>
-
-
-
 </body>
 </html>

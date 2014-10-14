@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Värd: 127.0.0.1
--- Tid vid skapande: 06 okt 2014 kl 03:38
+-- Tid vid skapande: 15 okt 2014 kl 00:40
 -- Serverversion: 5.6.17
 -- PHP-version: 5.5.12
 
@@ -39,11 +39,7 @@ CREATE TABLE IF NOT EXISTS `customers` (
 
 INSERT INTO `customers` (`USERNAME`, `PASSWORD`, `ADDRESS`) VALUES
 ('test', '$2y$10$pjbT54tCrklaO88dmyd1sefUlUIpGCeCj2T2/pEPTfr/WfQk0rmLa', 'test'),
-('kund', '$2y$10$QnGY9Ofqf2/cqIkKioIDa.dCASDMyOhTodr1Can7Tl3QbBNBSEy/W', 'kund'),
-('hej', '$2y$10$iSkwTRGtOHcTJGzyv6puauYP7wpltS4GvGiiCLfGGfE0kpGaVz.OC', 'hej'),
-('haha', '$2y$10$n28MxSm7NZR0rvF./Sq8QOMBGrLMjhdda4XrxKGyaBQC/Gk8QoOo.', 'haha'),
-('oj', '$2y$10$Kc3607QqNMqTllnSzRv.PeStudydE8C/bi8ujRMljpEXLhIfbpqWC', 'oj'),
-('aa', '$2y$10$BxwaoWsd..SaWs1sWvP4v.A6DmeE17XASc.v1pockX5BLEGbVqlkG', 'aa');
+('kund', '$2y$10$QnGY9Ofqf2/cqIkKioIDa.dCASDMyOhTodr1Can7Tl3QbBNBSEy/W', 'kund');
 
 -- --------------------------------------------------------
 
@@ -65,7 +61,12 @@ CREATE TABLE IF NOT EXISTS `products` (
 INSERT INTO `products` (`ID`, `NAME`, `PRICE`) VALUES
 (1, 'Glass', 200),
 (2, 'Lunch', 500),
-(3, 'Bakelse', 300);
+(3, 'Bakelse', 300),
+(4, 'Kaffe', 150),
+(5, 'Te', 150),
+(6, 'Baguette', 200),
+(7, 'Sallad', 200),
+(8, 'Energidryck', 800);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
